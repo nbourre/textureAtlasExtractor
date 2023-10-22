@@ -18,7 +18,7 @@
             "justMyCode": true
         },
         {
-            "name": "Python: Test 2",
+            "name": "Python: Test with flags",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -27,6 +27,7 @@
                 "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_charactersEquipment.xml",
                 "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_charactersEquipment.png",
                 "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_charactersEquipment",
+                "--export-spritesheet",
             ],
             "justMyCode": true
         }

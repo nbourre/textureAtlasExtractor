@@ -113,16 +113,22 @@ def generate_sprite_sheet(xml_file, output_dir, original_filename):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Extract subtextures from a texture atlas XML file.")
+    parser = argparse.ArgumentParser(description="Extract subtextures and optionally generate a converted sprite sheet.")
     parser.add_argument("xml_file", help="Path to the texture atlas XML file")
-    parser.add_argument("atlas_image", help="Path to the texture atlas image (PNG)")
-    parser.add_argument("output_dir", help="Path to the directory for saving individual subtextures")
+    parser.add_argument("atlas_image", help="Path to the original texture atlas image (PNG)")
+    parser.add_argument("output_dir", help="Path to the output directory for subtextures and sprite sheets")
+    parser.add_argument("--export-spritesheet", action="store_true", help="Export the generated sprite sheet without user input")
 
     args = parser.parse_args()
 
+    # Extract subtextures
     extract_subtextures(args.xml_file, args.atlas_image, args.output_dir)
 
-    # Ask the user if they want to create a sprite sheet
-    create_sprite_sheet = input("Do you want to create a sprite sheet? (y/n): ")
-    if create_sprite_sheet.lower() == 'y':
+    # Automatically generate and export a sprite sheet if the flag is set
+    if args.export_spritesheet:
         generate_sprite_sheet(args.xml_file, args.output_dir, os.path.basename(args.atlas_image))
+    else:
+        # Ask the user if they want to create a sprite sheet
+        create_sprite_sheet = input("Do you want to create a converted sprite sheet? (y/n): ")
+        if create_sprite_sheet.lower() == 'y':
+            generate_sprite_sheet(args.xml_file, args.output_dir, os.path.basename(args.atlas_image))
