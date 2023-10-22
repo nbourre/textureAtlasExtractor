@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Test 1",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_characters.xml",
+                "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_characters.png",
+                "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_characters",
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Test 2",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_charactersEquipment.xml",
+                "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_charactersEquipment.png",
+                "D:/OneDrive - Cégep de Shawinigan/_cours/ressources/jeux/kenney/Sports Pack/Spritesheet/sheet_charactersEquipment",
+            ],
+            "justMyCode": true
+        }
+    ]
+}
